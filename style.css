@@ -1,0 +1,156 @@
+html,body{
+background-color: #f1f2f6;
+margin: auto;
+height: auto;
+width: auto;
+}
+.nav{
+    padding:20px 100px;
+    background-color: #fff;
+    margin: 0px;
+    width:auto;
+  
+}
+.name{
+    color: rgb(0, 0, 0);
+    margin-left: 53px;
+}
+.main{
+height: 12em;
+width: 50em;
+background-color:#fff;
+padding:30px 20px;
+margin: 15px;
+position: absolute;
+left: 20em;
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+.layout{
+  height:100em;
+  width: 55em;
+  position: relative;
+left: 20em;
+top:17em;
+
+
+}
+.image{
+ height: 100px;
+width: 100px;
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%,-50%);
+background-image: url(WhatsApp\ Image\ 2025-01-21\ at\ 12.22.15_4f6cb7f8.jpg);
+background-size: 100% 100%;
+border-radius: 5em;
+}
+.money {
+  height: 50px;
+  width: 50em;
+  background-color: rgb(0, 227, 151);
+  margin: 10px 0;
+  position: sticky;
+  top: 0px;
+  z-index: 9999;
+  left: 20.8em;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+.moneyamount{
+ position:sticky;
+  top: 0px;
+  font-size: 45px;
+  margin: auto;
+}
+.card-container{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 10px 10px;
+  padding: 20px;
+  position: absolute;
+  top: 470px;
+  left: 316px;
+
+
+}
+.card{
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+height: 200px;
+width: 230px;
+transition: 1s ease-in;
+}
+.card:hover{
+  background-color: rgb(155, 152, 152);
+}
+.card-image{
+  /* background-image: url(https://neal.fun/spend/images/coca-cola-pack.jpg); */
+  margin: 15px 65px;
+  background-size: 100% 100%;
+  height: 100px;
+  width: 100px;
+  position: relative;
+  bottom: 20px;
+ 
+}
+.card-name{
+  font: 22px roboto,snas-serif;
+  color: #333333;
+  font-family: 22px;
+  margin: auto;
+  position: relative;
+  bottom: 30px;
+}
+.sell-btn{
+  padding: 10px 20px;
+}
+.input{
+  padding: 9px 10px;
+  width: 60px
+}
+.buy-btn{
+  padding: 10px 20px;
+}
+.amount{
+ margin: auto;
+ position: relative;
+ top: 1px;
+ font-size: 20px;
+ color: #24c486;
+  
+}
+.main-name{
+  margin: auto; 
+position: absolute;
+top: 185px;
+left: 260px;
+color: #000000;
+font-size: 3em;
+}
+.Image{
+  margin: 15px 65px;
+  background-size: 100% 100%;
+  height: 100px;
+  width: 100px;
+  position: relative;
+  bottom: 20px;
+ 
+}
+.image-crd{
+  margin: 15px 65px;
+  background-size: 100% 100%;
+  height: 100px;
+  width: 100px;
+  position: relative;
+  bottom: 18px;
+ right: 65px;
+}
