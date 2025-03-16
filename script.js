@@ -119,24 +119,25 @@ const cardData = [
   const postContainer = document.querySelector('.card-container');
   
   const postMethods = () => {
-	const data = cardData.map((abcd,index) => {
+	const data = cardData.map((item,index) => {
 	  const postElement = document.createElement('div');
 	  postElement.classList.add('card');
+	  cardData[index].count = 0;
 	  postElement.innerHTML = `
 		<div class="card-image">
-		  <img class="image-crd"src="${abcd.Image}" alt="">
+		  <img class="image-crd"src="${item.Image}" alt="">
 		</div>
-		<h2 class="card-name">${abcd.name}</h2>
-		<div><h3 class="amount">${abcd.amount}</h3></div>
+		<h2 class="card-name">${item.name}</h2>
+		<div><h3 class="amount">${item.amount}</h3></div>
 		<button type="button" class="sell-btn" data-index="${index}">Sell</button>
-		<input type="email" class="input" name="email">
+		<input type="number" id="item-${index}" class="input" name="number" readonly value="${item.count}">
 		<button class="buy-btn" data-index="${index}">Buy</button>
 	  `;
 	  return postElement;
 	});
   
-	data.forEach((abcd) => {
-	  postContainer.appendChild(abcd);
+	data.forEach((item) => {
+	  postContainer.appendChild(item);
 	});
   };
   
@@ -148,6 +149,8 @@ const cardData = [
 	if (userMoney >= itemPrice) {
 	  userMoney -= itemPrice;  
 	  updateMoneyAmount();  
+	  cardData[index].count += 1;
+	  document.getElementById(`item-${index}`).value = cardData[index].count;
 	  console.log(`Bought one from card: ${cardData[index].name}. Remaining funds: $${userMoney}`);
 	} else {
 	  alert('Insufficient funds to buy this item.');
@@ -162,6 +165,8 @@ const cardData = [
 		alert("amount exceed")
 		return userMoney;
 	}
+	cardData[index].count -= 1;
+	document.getElementById(`item-${index}`).value = cardData[index].count;
 	userMoney += itemPrice;  
 	updateMoneyAmount();  
 	console.log(`Sold one from card: ${cardData[index].name}. New balance: $${userMoney}`);
